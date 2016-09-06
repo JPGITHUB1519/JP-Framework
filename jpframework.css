@@ -13,7 +13,6 @@
 	box-sizing: border-box;
 }
 
-
 .container 
 {
 	width: 100%;
@@ -279,4 +278,50 @@ video
 	margin : 0 auto;
 }
 
+/* visibility */
 
+/*  visible only mobile mobiles */
+.visible-only-mobile
+{
+	display : block;
+}
+/*  visible only desktop */
+.visible-only-large
+{
+	display : none;
+}
+
+/*  visible only tables */
+.visible-only-medium
+{
+	display : none;
+}
+
+
+
+/* no grid mediaqueries */
+@media only screen and (min-width: 600px) 
+{
+    /* For tablets: */
+    .visible-only-mobile
+	{
+		display : none;
+	}
+    .visible-only-medium
+    {
+    	display : block;
+    }
+}
+
+@media only screen and (min-width: 768px) 
+{
+    /* For desktop: */
+    .visible-only-large
+	{
+		display : block;
+	}
+	.visible-only-medium
+	{
+		display : none;
+	}
+}
